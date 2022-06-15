@@ -1,0 +1,114 @@
+<%- include ("header"); %>
+<body>
+  <div class="content">
+    <div class="form-message">
+      <h1>Welcome</h1>
+      <p>
+        Congratulations on being part of the team! The whole company welcomes
+        you and we look forward to a successful journey with you! Welcome
+        aboard!
+      </p>
+    </div>
+
+    <form action="/form" class="input-form" method="POST">
+      <div class="info-box">
+        <div class="left-side">
+          <div class="labels-and-inputs">
+            <label for="">First Name</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs">
+            <label for="">Last Name</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs">
+            <label for="">Preferred Name</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs">
+            <label for="">Gender</label>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="labels-and-inputs">
+            <label for="pronouns">Pronouns</label>
+            <select name="pronouns" id="pronouns">
+              <option value="his">His</option>
+              <option value="her">Her</option>
+              <option value="they">They</option>
+            </select>
+          </div>
+          <div class="labels-and-inputs">
+            <label for="addy">Select Location</label>
+            <select name="addy" id="addy">
+              <option value="home">Home</option>
+              <option value="office">Office</option>
+            </select>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="labels-and-inputs home-address">
+            <label for="address">Address</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs home-address">
+            <label for="address">Apartment No.</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs home-address">
+            <label for="city">City</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs home-address">
+            <label for="province">Province</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs home-address">
+            <label for="country">Country</label>
+            <input type="text" />
+          </div>
+
+          <div class="labels-and-inputs home-address">
+            <label for="postal-code">Postal Code</label>
+            <input type="text" />
+          </div>
+          <button
+            class="login-btn"
+            style="padding: 10px 20px; margin-left: 100px"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var address = document.getElementById("addy");
+    var elements = document.getElementsByClassName("home-address");
+    address.addEventListener("change", () => {
+      if (address.selectedIndex === 1) {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].innerHTML = "";
+        }
+      }
+    });
+    // address.addEventListener("change", () => {
+    //   if (address.selectedIndex === 1) {
+    //     elements.forEach((element) => {
+    //       element.style.display === "none";
+    //     });
+    //   }
+    // });
+  </script>
+</body>

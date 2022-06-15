@@ -1,0 +1,73 @@
+<%- include ("header")%>
+<body>
+  <form action="/package" class="product-form">
+    <h1 style="margin-bottom: 20px"><strong>Choose Your Bundle!</strong></h1>
+    <input type="radio" name="bundle" id="bundle1" class="input-hidden" />
+    <label for="bundle1">
+      <img src="bundle1.png" alt="First bundle" />
+    </label>
+
+    <input type="radio" name="bundle" id="bundle2" class="input-hidden" />
+    <label for="bundle2">
+      <img src="bundle2.png" alt="Second Bundle" />
+    </label>
+
+    <input type="radio" name="bundle" id="bundle3" class="input-hidden" />
+    <label for="bundle3">
+      <img src="bundle3.png" alt="Third Bundle" />
+    </label>
+
+    <div class="bundle-options">
+      <div class="option">
+        <label for="size">Size: </label>
+        <select name="size" id="size">
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+        </select>
+      </div>
+      <div class="option">
+        <label for="colorpicker">Color: </label>
+        <select name="colorpicker" id="colorpicker">
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="pink">Pink</option>
+          <option value="purple">Purple</option>
+          <option value="orange">Orange</option>
+        </select>
+      </div>
+      <div class="option">
+        <label for="text">Custom Text: </label>
+        <input type="text" placeholder="Text" />
+      </div>
+      <div class="option">
+        <label for="textcolor">Text Color: </label>
+        <select name="colorpicker" id="colorpicker">
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="pink">Pink</option>
+          <option value="purple">Purple</option>
+          <option value="orange">Orange</option>
+        </select>
+      </div>
+    </div>
+    <div class="included-package">
+      <img src="hat.png" alt="Third Bundle" id="hat" />
+
+      <img src="pen.png" alt="Third Bundle" id="pen" />
+    </div>
+    <p id="included-para">*Included with each bundle.</p>
+
+    <button type="submit" class="login-btn" style="padding: 10px 20px">
+      Next
+    </button>
+  </form>
+</body>

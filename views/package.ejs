@@ -1,0 +1,23 @@
+<%- include ("header")%>
+<body>
+  <form action="/success" class="product-form">
+    <h1>Choose Your Packaging</h1>
+    <input type="radio" name="package" id="package1" class="input-hidden" />
+    <label for="package1">
+      <img src="package1.png" alt="Third Bundle" id="box1" />
+    </label>
+
+    <input type="radio" name="package" id="package2" class="input-hidden" />
+    <label for="package2">
+      <img src="package2.png" alt="Third Bundle" id="box2" />
+    </label>
+
+    <div style="text-align: center; margin: 20px">
+      <label for="colorpicker">Custom Box Text: </label>
+      <input type="text" />
+    </div>
+    <button type="submit" class="login-btn" style="padding: 10px 20px">
+      Done
+    </button>
+  </form>
+</body>
